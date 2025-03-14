@@ -36,28 +36,28 @@ namespace GestionaleMunicipale.Controllers
         public async Task<IActionResult> VerbaliPerTrasgressore()
         {
             var report = await _verbaliPerTrasgressoreService.GetVerbaliPerTrasgressoreAsync();
-            return View(report.ToList());
+            return View(report);
         }
 
         [HttpGet("PuntiDecurtatiPerTrasgressore")]
         public async Task<IActionResult> PuntiDecurtatiPerTrasgressore()
         {
             var report = await _puntiDecurtatiService.GetPuntiDecurtatiPerTrasgressoreAsync();
-            return View(report.ToList());
+            return View(report);
         }
 
         [HttpGet("VerbaliSopra10Punti")]
         public async Task<IActionResult> VerbaliSopra10Punti()
         {
             var report = await _verbaliSopra10Service.GetVerbaliSopra10PuntiAsync();
-            return View(report.ToList());
+            return View(report);
         }
 
         [HttpGet("VerbaliSopra400Euro")]
         public async Task<IActionResult> VerbaliSopra400Euro()
         {
             var report = await _verbaliSopra400Service.GetVerbaliSopra400EuroAsync();
-            return View(report.ToList()); // ✅ Conversione esplicita per evitare errori
+            return View(report);
         }
 
     }

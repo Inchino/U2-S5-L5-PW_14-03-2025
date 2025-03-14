@@ -1,24 +1,25 @@
-﻿@model List<ReportPuntiDecurtatiPerTrasgressoreViewModel>
+﻿@model List<GestionaleMunicipale.ViewModels.ReportPuntiDecurtatiPerTrasgressoreViewModel>
 
 @{
     ViewData["Title"] = "Report Punti Decurtati per Trasgressore";
 }
 
-<h2 class="text-center">Report Punti Decurtati per Trasgressore</h2>
-
-<table class="table table-striped mt-4">
+<h2>Punti Decurtati per Trasgressore</h2>
+<table class="table table-bordered">
     <thead>
         <tr>
-            <th>Trasgressore</th>
+            <th>Cognome</th>
+            <th>Nome</th>
             <th>Totale Punti Decurtati</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var report in Model)
+        @foreach (var item in Model)
         {
             <tr>
-                <td>@report.Nome @report.Cognome</td>
-                <td>@report.TotalePuntiDecurtati</td>
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.TotalePuntiDecurtati</td>
             </tr>
         }
     </tbody>

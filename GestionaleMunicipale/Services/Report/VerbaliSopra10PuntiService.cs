@@ -1,5 +1,6 @@
 ﻿using GestionaleMunicipale.Data;
 using GestionaleMunicipale.Models;
+using GestionaleMunicipale.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,24 +18,20 @@ namespace GestionaleMunicipale.Services.Report
             _context = context;
         }
 
-        public async Task<IEnumerable<object>> GetVerbaliSopra10PuntiAsync()
+        public async Task<List<ReportVerbaliSopra10PuntiViewModel>> GetVerbaliSopra10PuntiAsync()
         {
-            try
-            {
-                return await _context.VerbaliViolazioni
-                    .Where(vv => vv.DecurtamentoPunti > 10)
-                    .Select(vv => new
-                    {
-                        vv.Verbale.IdVerbale,
-                        vv.Verbale.IdAnagrafica,
-                        vv.Verbale.Anagrafica.Nome,
-                        vv.Verbale.Anagrafica.Cognome,
-                        vv.Verbale.DataViolazione,
-                        vv.Verbale.Importo,
-                        vv.DecurtamentoPunti
-                    }).ToListAsync();
-            }
-            catch (Exception ex) { throw new Exception("Errore nel recupero del report verbali sopra 10 punti.", ex); }
+            return await _context.VerbaliViolazioni
+                .Where(vv => vv.DecurtamentoPunti > 10)
+                .Select(vv => new ReportVerbaliSopra10PuntiViewModel
+                {
+                    IdVerbale = vv.IdVerbale,
+                    Cognome = vv.Verbale.Anagrafica.Cognome,
+                    Nome = vv.Verbale.Anagrafica.Nome,
+                    DataViolazione = vv.Verbale.DataViolazione,
+                    DecurtamentoPunti = vv.DecurtamentoPunti,
+                    Importo = vv.Verbale.Importo
+                })
+                .ToListAsync();
         }
     }
 }

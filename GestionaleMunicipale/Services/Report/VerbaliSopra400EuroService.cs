@@ -1,5 +1,6 @@
 ﻿using GestionaleMunicipale.Data;
 using GestionaleMunicipale.Models;
+using GestionaleMunicipale.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,23 +18,19 @@ namespace GestionaleMunicipale.Services.Report
             _context = context;
         }
 
-        public async Task<IEnumerable<object>> GetVerbaliSopra400EuroAsync()
+        public async Task<List<ReportVerbaliSopra400EuroViewModel>> GetVerbaliSopra400EuroAsync()
         {
-            try
-            {
-                return await _context.Verbali
-                    .Where(v => v.Importo > 400)
-                    .Select(v => new
-                    {
-                        v.IdVerbale,
-                        v.IdAnagrafica,
-                        v.Anagrafica.Nome,
-                        v.Anagrafica.Cognome,
-                        v.DataViolazione,
-                        v.Importo
-                    }).ToListAsync();
-            }
-            catch (Exception ex) { throw new Exception("Errore nel recupero del report verbali sopra 400 euro.", ex); }
+            return await _context.Verbali
+                .Where(v => v.Importo > 400)
+                .Select(v => new ReportVerbaliSopra400EuroViewModel
+                {
+                    IdVerbale = v.IdVerbale,
+                    Cognome = v.Anagrafica.Cognome,
+                    Nome = v.Anagrafica.Nome,
+                    DataViolazione = v.DataViolazione,
+                    Importo = v.Importo
+                })
+                .ToListAsync();
         }
     }
 }

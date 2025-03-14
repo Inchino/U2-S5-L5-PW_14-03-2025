@@ -1,5 +1,6 @@
 ﻿using GestionaleMunicipale.Data;
 using GestionaleMunicipale.Models;
+using GestionaleMunicipale.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,21 +18,18 @@ namespace GestionaleMunicipale.Services.Report
             _context = context;
         }
 
-        public async Task<IEnumerable<object>> GetVerbaliPerTrasgressoreAsync()
+        public async Task<List<ReportVerbaliPerTrasgressoreViewModel>> GetVerbaliPerTrasgressoreAsync()
         {
-            try
-            {
-                return await _context.Verbali
-                    .GroupBy(v => v.IdAnagrafica)
-                    .Select(g => new
-                    {
-                        IdAnagrafica = g.Key,
-                        Nome = _context.Anagrafiche.Where(a => a.IdAnagrafica == g.Key).Select(a => a.Nome).FirstOrDefault(),
-                        Cognome = _context.Anagrafiche.Where(a => a.IdAnagrafica == g.Key).Select(a => a.Cognome).FirstOrDefault(),
-                        TotaleVerbali = g.Count()
-                    }).ToListAsync();
-            }
-            catch (Exception ex) { throw new Exception("Errore nel recupero del report verbali per trasgressore.", ex); }
+            return await _context.Verbali
+                .GroupBy(v => new { v.IdAnagrafica, v.Anagrafica.Cognome, v.Anagrafica.Nome })
+                .Select(g => new ReportVerbaliPerTrasgressoreViewModel
+                {
+                    IdAnagrafica = g.Key.IdAnagrafica,
+                    Cognome = g.Key.Cognome,
+                    Nome = g.Key.Nome,
+                    TotaleVerbali = g.Count()
+                })
+                .ToListAsync();
         }
     }
 }

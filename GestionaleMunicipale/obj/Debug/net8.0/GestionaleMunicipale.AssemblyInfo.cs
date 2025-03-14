@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionaleMunicipale")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85de0baa40697548e02ccf738934d828b061e736")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30fbd9847b5ec2ad610a3b496a8c3e32ffd8a0d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionaleMunicipale")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionaleMunicipale")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
