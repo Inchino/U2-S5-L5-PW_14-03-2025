@@ -1,4 +1,15 @@
+using GestionaleMunicipale.Models;
+using GestionaleMunicipale.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Aggiunta del DbContext al container dei servizi
+builder.Services.AddDbContext<GestionaleMunicipaleDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

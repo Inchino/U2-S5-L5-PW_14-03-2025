@@ -1,0 +1,9 @@
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.csproj.AssemblyReference.cache
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.AssemblyInfoInputs.cache
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.AssemblyInfo.cs
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.csproj.CoreCompileInputs.cache
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.RazorAssemblyInfo.cache
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.RazorAssemblyInfo.cs
+C:\Users\aless\source\repos\Inchino\U2-S5-L5-PW_14-03-2025\GestionaleMunicipale\obj\Debug\net8.0\GestionaleMunicipale.sourcelink.json
