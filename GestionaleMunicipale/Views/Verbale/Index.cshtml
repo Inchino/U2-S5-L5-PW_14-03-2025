@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Verbali";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Lista Verbali</h2>
+    <a href="/Verbale/Create" class="btn btn-success mb-3">Compila Nuovo Verbale</a>
+
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>ID Verbale</th>
+                <th>Data Violazione</th>
+                <th>Indirizzo</th>
+                <th>Agente</th>
+                <th>Importo</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="verbaliTable">
+        </tbody>
+    </table>
+</div>

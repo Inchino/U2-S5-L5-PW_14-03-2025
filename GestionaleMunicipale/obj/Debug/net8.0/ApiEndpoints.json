@@ -1,0 +1,157 @@
+[
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.AnagraficaController",
+    "Method": "GetAll",
+    "RelativePath": "api/anagrafica",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.AnagraficaController",
+    "Method": "Create",
+    "RelativePath": "api/anagrafica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anagrafica",
+        "Type": "GestionaleMunicipale.Models.Anagrafica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.AnagraficaController",
+    "Method": "GetById",
+    "RelativePath": "api/anagrafica/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.AnagraficaController",
+    "Method": "Update",
+    "RelativePath": "api/anagrafica/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "anagrafica",
+        "Type": "GestionaleMunicipale.Models.Anagrafica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.AnagraficaController",
+    "Method": "Delete",
+    "RelativePath": "api/anagrafica/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.ReportsController",
+    "Method": "GetPuntiDecurtatiPerTrasgressore",
+    "RelativePath": "api/reports/punti-decurtati-per-trasgressore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.ReportsController",
+    "Method": "GetVerbaliPerTrasgressore",
+    "RelativePath": "api/reports/verbali-per-trasgressore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.ReportsController",
+    "Method": "GetVerbaliSopra10Punti",
+    "RelativePath": "api/reports/verbali-sopra-10-punti",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.ReportsController",
+    "Method": "GetVerbaliSopra400Euro",
+    "RelativePath": "api/reports/verbali-sopra-400-euro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.TipoViolazioneController",
+    "Method": "GetAll",
+    "RelativePath": "api/tipoviolazione",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.VerbaleController",
+    "Method": "GetAll",
+    "RelativePath": "api/verbale",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionaleMunicipale.Controllers.VerbaleController",
+    "Method": "Create",
+    "RelativePath": "api/verbale",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "verbale",
+        "Type": "GestionaleMunicipale.Models.Verbale",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

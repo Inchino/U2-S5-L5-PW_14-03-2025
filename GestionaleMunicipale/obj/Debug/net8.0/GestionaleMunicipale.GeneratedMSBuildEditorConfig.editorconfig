@@ -28,6 +28,22 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Anagrafica/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hZ3JhZmljYVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Anagrafica/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hZ3JhZmljYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Anagrafica/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hZ3JhZmljYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Anagrafica/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hZ3JhZmljYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,12 +52,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Reports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Reports/PuntiDecurtatiPerTrasgressore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xQdW50aURlY3VydGF0aVBlclRyYXNncmVzc29yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Reports/VerbaliPerTrasgressore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xWZXJiYWxpUGVyVHJhc2dyZXNzb3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Reports/VerbaliSopra10Punti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xWZXJiYWxpU29wcmExMFB1bnRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Reports/VerbaliSopra400Euro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xWZXJiYWxpU29wcmE0MDBFdXJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/TipoViolazione/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1Zpb2xhemlvbmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Verbale/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyYmFsZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Verbale/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyYmFsZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/Verbale/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyYmFsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aless/source/repos/Inchino/U2-S5-L5-PW_14-03-2025/GestionaleMunicipale/Views/_ViewImports.cshtml]

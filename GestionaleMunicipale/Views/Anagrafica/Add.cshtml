@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Aggiungi Trasgressore";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Aggiungi Trasgressore</h2>
+
+    <div class="card p-4 mt-4">
+        <form id="addAnagraficaForm">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="cognome" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="cognome" required>
+            </div>
+            <div class="mb-3">
+                <label for="indirizzo" class="form-label">Indirizzo</label>
+                <input type="text" class="form-control" id="indirizzo">
+            </div>
+            <div class="mb-3">
+                <label for="citta" class="form-label">Città</label>
+                <input type="text" class="form-control" id="citta">
+            </div>
+            <div class="mb-3">
+                <label for="cap" class="form-label">CAP</label>
+                <input type="text" class="form-control" id="cap">
+            </div>
+            <div class="mb-3">
+                <label for="cf" class="form-label">Codice Fiscale</label>
+                <input type="text" class="form-control" id="cf" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Aggiungi</button>
+            <a href="/Anagrafica" class="btn btn-secondary">Annulla</a>
+        </form>
+    </div>
+</div>

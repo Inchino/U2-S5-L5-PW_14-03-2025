@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
+using GestionaleMunicipale.Services.Report;
+using GestionaleMunicipale.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,12 @@ builder.Services.AddDbContext<GestionaleMunicipaleDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped(typeof(GenericService<>));
+builder.Services.AddScoped<VerbaliPerTrasgressoreService>();
+builder.Services.AddScoped<PuntiDecurtatiPerTrasgressoreService>();
+builder.Services.AddScoped<VerbaliSopra10PuntiService>();
+builder.Services.AddScoped<VerbaliSopra400EuroService>();
 
 var app = builder.Build();
 

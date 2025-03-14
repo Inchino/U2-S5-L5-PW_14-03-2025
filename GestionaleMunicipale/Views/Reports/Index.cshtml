@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Report Verbali";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Seleziona un Report</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Verbali per Trasgressore</h5>
+                    <p class="card-text">Visualizza il totale dei verbali trascritti per ogni trasgressore.</p>
+                    <a href="/Reports/VerbaliPerTrasgressore" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Punti Decurtati per Trasgressore</h5>
+                    <p class="card-text">Visualizza il totale dei punti decurtati per trasgressore.</p>
+                    <a href="/Reports/PuntiDecurtatiPerTrasgressore" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Verbali con più di 10 punti decurtati</h5>
+                    <p class="card-text">Visualizza i verbali con decurtamento punti superiore a 10.</p>
+                    <a href="/Reports/VerbaliSopra10Punti" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Verbali sopra 400€</h5>
+                    <p class="card-text">Visualizza i verbali con importo maggiore di 400 euro.</p>
+                    <a href="/Reports/VerbaliSopra400Euro" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

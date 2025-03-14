@@ -2,7 +2,93 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h2>Benvenuto nel Sistema di Gestione</h2>
+        <p class="lead">Utilizza il menu per navigare tra le sezioni.</p>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Gestione Trasgressori</h5>
+                    <p class="card-text">Aggiungi e modifica le informazioni sui trasgressori.</p>
+                    <a href="/Anagrafica" class="btn btn-primary">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Violazioni Contestabili</h5>
+                    <p class="card-text">Consulta l'elenco delle violazioni disponibili.</p>
+                    <a href="/TipoViolazione" class="btn btn-primary">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Compilazione Verbale</h5>
+                    <p class="card-text">Registra un nuovo verbale.</p>
+                    <a href="/Verbale" class="btn btn-primary">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Report</h5>
+                    <p class="card-text">Visualizza statistiche e report sui verbali.</p>
+                    <a href="/Reports" class="btn btn-primary">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center">Sezioni</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Gestione Trasgressori</div>
+                <div class="card-body">
+                    <a href="/Anagrafica" class="btn btn-outline-primary w-100">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">Violazioni Contestabili</div>
+                <div class="card-body">
+                    <a href="/TipoViolazione" class="btn btn-outline-secondary w-100">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">Compilazione Verbale</div>
+                <div class="card-body">
+                    <a href="/Verbale" class="btn btn-outline-success w-100">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-danger text-white">Report</div>
+                <div class="card-body">
+                    <a href="/Reports" class="btn btn-outline-danger w-100">Vai alla Sezione</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

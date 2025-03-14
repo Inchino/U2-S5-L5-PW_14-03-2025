@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Compilazione Verbale";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Compilazione Nuovo Verbale</h2>
+
+    <div class="card p-4 mt-4">
+        <form id="createVerbaleForm">
+            <div class="mb-3">
+                <label for="idAnagrafica" class="form-label">ID Trasgressore</label>
+                <input type="text" class="form-control" id="idAnagrafica" required>
+            </div>
+            <div class="mb-3">
+                <label for="dataViolazione" class="form-label">Data Violazione</label>
+                <input type="date" class="form-control" id="dataViolazione" required>
+            </div>
+            <div class="mb-3">
+                <label for="indirizzo" class="form-label">Indirizzo Violazione</label>
+                <input type="text" class="form-control" id="indirizzo" required>
+            </div>
+            <div class="mb-3">
+                <label for="agente" class="form-label">Nominativo Agente</label>
+                <input type="text" class="form-control" id="agente" required>
+            </div>
+            <div class="mb-3">
+                <label for="dataTrascrizione" class="form-label">Data Trascrizione Verbale</label>
+                <input type="date" class="form-control" id="dataTrascrizione" required>
+            </div>
+            <div class="mb-3">
+                <label for="importo" class="form-label">Importo (€)</label>
+                <input type="number" step="0.01" class="form-control" id="importo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registra Verbale</button>
+            <a href="/Verbale" class="btn btn-secondary">Annulla</a>
+        </form>
+    </div>
+</div>
