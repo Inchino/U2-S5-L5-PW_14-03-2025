@@ -1,16 +1,12 @@
-﻿using GestionaleMunicipale.Data;
-using GestionaleMunicipale.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using GestionaleMunicipale.Services;
-using GestionaleMunicipale.Services.Report;
-using Microsoft.AspNetCore.Mvc;
+using GestionaleMunicipale.Models;
 using System;
 using System.Threading.Tasks;
 
 namespace GestionaleMunicipale.Controllers
 {
-    [Route("api/verbale")]
-    [ApiController]
-    public class VerbaleController : ControllerBase
+    public class VerbaleController : Controller
     {
         private readonly GenericService<Verbale> _service;
 
@@ -20,13 +16,35 @@ namespace GestionaleMunicipale.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
+        public async Task<IActionResult> Index()
+        {
+            var verbali = await _service.GetAllAsync();
+            return View(verbali);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Verbale verbale)
+        public async Task<IActionResult> Create(Verbale verbale)
         {
-            await _service.CreateAsync(verbale);
-            return CreatedAtAction(nameof(GetAll), new { id = verbale.IdVerbale }, verbale);
+            if (ModelState.IsValid)
+            {
+                await _service.CreateAsync(verbale);
+                return RedirectToAction("Index");
+            }
+            return View(verbale);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var verbale = await _service.GetByIdAsync(id);
+            if (verbale == null) return NotFound();
+            return View(verbale);
         }
     }
 }

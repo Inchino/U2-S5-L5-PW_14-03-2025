@@ -1,16 +1,10 @@
-﻿using GestionaleMunicipale.Data;
-using GestionaleMunicipale.Models;
-using GestionaleMunicipale.Services;
+﻿using Microsoft.AspNetCore.Mvc;
 using GestionaleMunicipale.Services.Report;
-using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading.Tasks;
 
 namespace GestionaleMunicipale.Controllers
 {
-    [Route("api/reports")]
-    [ApiController]
-    public class ReportsController : ControllerBase
+    public class ReportsController : Controller
     {
         private readonly VerbaliPerTrasgressoreService _verbaliPerTrasgressoreService;
         private readonly PuntiDecurtatiPerTrasgressoreService _puntiDecurtatiService;
@@ -29,16 +23,38 @@ namespace GestionaleMunicipale.Controllers
             _verbaliSopra400Service = verbaliSopra400Service;
         }
 
-        [HttpGet("verbali-per-trasgressore")]
-        public async Task<IActionResult> GetVerbaliPerTrasgressore() => Ok(await _verbaliPerTrasgressoreService.GetVerbaliPerTrasgressoreAsync());
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-        [HttpGet("punti-decurtati-per-trasgressore")]
-        public async Task<IActionResult> GetPuntiDecurtatiPerTrasgressore() => Ok(await _puntiDecurtatiService.GetPuntiDecurtatiPerTrasgressoreAsync());
+        [HttpGet]
+        public async Task<IActionResult> VerbaliPerTrasgressore()
+        {
+            var report = await _verbaliPerTrasgressoreService.GetVerbaliPerTrasgressoreAsync();
+            return View(report);
+        }
 
-        [HttpGet("verbali-sopra-10-punti")]
-        public async Task<IActionResult> GetVerbaliSopra10Punti() => Ok(await _verbaliSopra10Service.GetVerbaliSopra10PuntiAsync());
+        [HttpGet]
+        public async Task<IActionResult> PuntiDecurtatiPerTrasgressore()
+        {
+            var report = await _puntiDecurtatiService.GetPuntiDecurtatiPerTrasgressoreAsync();
+            return View(report);
+        }
 
-        [HttpGet("verbali-sopra-400-euro")]
-        public async Task<IActionResult> GetVerbaliSopra400Euro() => Ok(await _verbaliSopra400Service.GetVerbaliSopra400EuroAsync());
+        [HttpGet]
+        public async Task<IActionResult> VerbaliSopra10Punti()
+        {
+            var report = await _verbaliSopra10Service.GetVerbaliSopra10PuntiAsync();
+            return View(report);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> VerbaliSopra400Euro()
+        {
+            var report = await _verbaliSopra400Service.GetVerbaliSopra400EuroAsync();
+            return View(report);
+        }
     }
 }

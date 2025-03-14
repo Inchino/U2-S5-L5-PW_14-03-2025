@@ -1,16 +1,11 @@
-﻿using GestionaleMunicipale.Data;
-using GestionaleMunicipale.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using GestionaleMunicipale.Services;
-using GestionaleMunicipale.Services.Report;
-using Microsoft.AspNetCore.Mvc;
-using System;
+using GestionaleMunicipale.Models;
 using System.Threading.Tasks;
 
 namespace GestionaleMunicipale.Controllers
 {
-    [Route("api/tipoviolazione")]
-    [ApiController]
-    public class TipoViolazioneController : ControllerBase
+    public class TipoViolazioneController : Controller
     {
         private readonly GenericService<TipoViolazione> _service;
 
@@ -20,6 +15,10 @@ namespace GestionaleMunicipale.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
+        public async Task<IActionResult> Index()
+        {
+            var violazioni = await _service.GetAllAsync();
+            return View(violazioni);
+        }
     }
 }

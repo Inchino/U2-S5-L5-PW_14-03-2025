@@ -1,16 +1,12 @@
-﻿using GestionaleMunicipale.Data;
-using GestionaleMunicipale.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using GestionaleMunicipale.Services;
-using GestionaleMunicipale.Services.Report;
-using Microsoft.AspNetCore.Mvc;
+using GestionaleMunicipale.Models;
 using System;
 using System.Threading.Tasks;
 
 namespace GestionaleMunicipale.Controllers
 {
-    [Route("api/anagrafica")]
-    [ApiController]
-    public class AnagraficaController : ControllerBase
+    public class AnagraficaController : Controller
     {
         private readonly GenericService<Anagrafica> _service;
 
@@ -20,31 +16,55 @@ namespace GestionaleMunicipale.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
+        public async Task<IActionResult> Index()
+        {
+            var trasgressori = await _service.GetAllAsync();
+            return View(trasgressori);
+        }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id) => Ok(await _service.GetByIdAsync(id));
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Anagrafica anagrafica)
+        public async Task<IActionResult> Create(Anagrafica anagrafica)
         {
-            await _service.CreateAsync(anagrafica);
-            return CreatedAtAction(nameof(GetById), new { id = anagrafica.IdAnagrafica }, anagrafica);
+            if (ModelState.IsValid)
+            {
+                await _service.CreateAsync(anagrafica);
+                return RedirectToAction("Index");
+            }
+            return View(anagrafica);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] Anagrafica anagrafica)
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var trasgressore = await _service.GetByIdAsync(id);
+            if (trasgressore == null) return NotFound();
+            return View(trasgressore);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, Anagrafica anagrafica)
         {
             if (id != anagrafica.IdAnagrafica) return BadRequest();
-            await _service.UpdateAsync(anagrafica);
-            return NoContent();
+            if (ModelState.IsValid)
+            {
+                await _service.UpdateAsync(anagrafica);
+                return RedirectToAction("Index");
+            }
+            return View(anagrafica);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return NoContent();
+            var trasgressore = await _service.GetByIdAsync(id);
+            if (trasgressore == null) return NotFound();
+            return View(trasgressore);
         }
     }
 }
