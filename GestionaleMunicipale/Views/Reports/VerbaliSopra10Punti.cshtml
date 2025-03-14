@@ -1,20 +1,32 @@
-﻿@{
+﻿@model List<ReportVerbaliSopra10PuntiViewModel>
+
+@{
     ViewData["Title"] = "Report Verbali sopra 10 punti decurtati";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Report Verbali con più di 10 punti decurtati</h2>
+<h2 class="text-center">Report Verbali con più di 10 punti decurtati</h2>
 
-    <table class="table table-striped mt-4">
-        <thead>
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Trasgressore</th>
+            <th>Data Violazione</th>
+            <th>Importo</th>
+            <th>Punti Decurtati</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
             <tr>
-                <th>Trasgressore</th>
-                <th>Data Violazione</th>
-                <th>Importo</th>
-                <th>Punti Decurtati</th>
+                <td>@report.Nome @report.Cognome</td>
+                <td>@report.DataViolazione.ToShortDateString()</td>
+                <td>@report.Importo.ToString("C")</td>
+                <td>@report.DecurtamentoPunti</td>
             </tr>
-        </thead>
-        <tbody id="reportTable">
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>
+
+<a href="/Reports" class="btn btn-secondary mt-3">Torna ai Report</a>
+<a href="/" class="btn btn-secondary mt-3">Torna alla Home</a>

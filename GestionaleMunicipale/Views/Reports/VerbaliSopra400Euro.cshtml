@@ -1,19 +1,30 @@
-﻿@{
+﻿@model List<ReportVerbaliSopra400EuroViewModel>
+
+@{
     ViewData["Title"] = "Report Verbali sopra 400€";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Report Verbali sopra 400€</h2>
+<h2 class="text-center">Report Verbali sopra 400€</h2>
 
-    <table class="table table-striped mt-4">
-        <thead>
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Trasgressore</th>
+            <th>Data Violazione</th>
+            <th>Importo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
             <tr>
-                <th>Trasgressore</th>
-                <th>Data Violazione</th>
-                <th>Importo</th>
+                <td>@report.Nome @report.Cognome</td>
+                <td>@report.DataViolazione.ToShortDateString()</td>
+                <td>@report.Importo.ToString("C")</td>
             </tr>
-        </thead>
-        <tbody id="reportTable">
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>
+
+<a href="/Reports" class="btn btn-secondary mt-3">Torna ai Report</a>
+<a href="/" class="btn btn-secondary mt-3">Torna alla Home</a>

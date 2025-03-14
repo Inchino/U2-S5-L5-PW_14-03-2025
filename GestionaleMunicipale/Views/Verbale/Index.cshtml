@@ -1,23 +1,39 @@
-﻿@{
+﻿@model List<VerbaleViewModel>
+
+@{
     ViewData["Title"] = "Verbali";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Lista Verbali</h2>
-    <a href="/Verbale/Create" class="btn btn-success mb-3">Compila Nuovo Verbale</a>
+<h2 class="text-center">Lista Verbali</h2>
 
-    <table class="table table-striped mt-4">
-        <thead>
+<a href="/Verbale/Create" class="btn btn-success mb-3">Compila Nuovo Verbale</a>
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>ID Verbale</th>
+            <th>Data Violazione</th>
+            <th>Indirizzo</th>
+            <th>Agente</th>
+            <th>Importo</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var verbale in Model)
+        {
             <tr>
-                <th>ID Verbale</th>
-                <th>Data Violazione</th>
-                <th>Indirizzo</th>
-                <th>Agente</th>
-                <th>Importo</th>
-                <th>Azioni</th>
+                <td>@verbale.IdVerbale</td>
+                <td>@verbale.DataViolazione.ToShortDateString()</td>
+                <td>@verbale.IndirizzoViolazione</td>
+                <td>@verbale.NominativoAgente</td>
+                <td>@verbale.Importo.ToString("C")</td>
+                <td>
+                    <a href="/Verbale/Details/@verbale.IdVerbale" class="btn btn-info btn-sm">Dettagli</a>
+                </td>
             </tr>
-        </thead>
-        <tbody id="verbaliTable">
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>
+
+<a href="/" class="btn btn-secondary mt-3">Torna alla Home</a>

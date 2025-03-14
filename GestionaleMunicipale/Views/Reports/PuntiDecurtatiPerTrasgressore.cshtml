@@ -1,18 +1,28 @@
-﻿@{
+﻿@model List<ReportPuntiDecurtatiPerTrasgressoreViewModel>
+
+@{
     ViewData["Title"] = "Report Punti Decurtati per Trasgressore";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Report Punti Decurtati per Trasgressore</h2>
+<h2 class="text-center">Report Punti Decurtati per Trasgressore</h2>
 
-    <table class="table table-striped mt-4">
-        <thead>
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Trasgressore</th>
+            <th>Totale Punti Decurtati</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
             <tr>
-                <th>Trasgressore</th>
-                <th>Totale Punti Decurtati</th>
+                <td>@report.Nome @report.Cognome</td>
+                <td>@report.TotalePuntiDecurtati</td>
             </tr>
-        </thead>
-        <tbody id="reportTable">
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>
+
+<a href="/Reports" class="btn btn-secondary mt-3">Torna ai Report</a>
+<a href="/" class="btn btn-secondary mt-3">Torna alla Home</a>

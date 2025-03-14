@@ -1,18 +1,27 @@
-﻿@{
+﻿@model List<TipoViolazioneViewModel>
+
+@{
     ViewData["Title"] = "Violazioni Contestabili";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Elenco Violazioni Contestabili</h2>
+<h2 class="text-center">Elenco Violazioni Contestabili</h2>
 
-    <table class="table table-striped mt-4">
-        <thead>
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>ID Violazione</th>
+            <th>Descrizione</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var violazione in Model)
+        {
             <tr>
-                <th>ID Violazione</th>
-                <th>Descrizione</th>
+                <td>@violazione.IdViolazione</td>
+                <td>@violazione.Descrizione</td>
             </tr>
-        </thead>
-        <tbody id="violazioniTable">
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>
+
+<a href="/" class="btn btn-secondary mt-3">Torna alla Home</a>

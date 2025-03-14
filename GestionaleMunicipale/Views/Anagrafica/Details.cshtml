@@ -1,22 +1,18 @@
-﻿@{
+﻿@model AnagraficaViewModel
+
+@{
     ViewData["Title"] = "Dettagli Trasgressore";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center">Dettagli Trasgressore</h2>
+<h2 class="text-center">Dettagli Trasgressore</h2>
 
-    <div class="card p-4 mt-4">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Nome:</strong> <span id="nome"></span></li>
-            <li class="list-group-item"><strong>Cognome:</strong> <span id="cognome"></span></li>
-            <li class="list-group-item"><strong>Indirizzo:</strong> <span id="indirizzo"></span></li>
-            <li class="list-group-item"><strong>Città:</strong> <span id="citta"></span></li>
-            <li class="list-group-item"><strong>CAP:</strong> <span id="cap"></span></li>
-            <li class="list-group-item"><strong>Codice Fiscale:</strong> <span id="cf"></span></li>
-        </ul>
-        <div class="mt-3">
-            <a href="/Anagrafica" class="btn btn-secondary">Torna alla lista</a>
-            <a href="#" class="btn btn-danger" onclick="deleteTrasgressore()">Elimina</a>
-        </div>
-    </div>
-</div>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Nome:</strong> @Model.Nome</li>
+    <li class="list-group-item"><strong>Cognome:</strong> @Model.Cognome</li>
+    <li class="list-group-item"><strong>Indirizzo:</strong> @Model.Indirizzo</li>
+    <li class="list-group-item"><strong>Città:</strong> @Model.Citta</li>
+    <li class="list-group-item"><strong>CAP:</strong> @Model.CAP</li>
+    <li class="list-group-item"><strong>Codice Fiscale:</strong> @Model.CodiceFiscale</li>
+</ul>
+
+<a href="/Anagrafica" class="btn btn-secondary mt-3">Torna alla lista</a>
