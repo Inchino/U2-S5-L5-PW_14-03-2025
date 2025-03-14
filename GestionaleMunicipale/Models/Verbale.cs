@@ -10,14 +10,13 @@ namespace GestionaleMunicipale.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdVerbale { get; set; }
+        public Guid IdVerbale { get; set; }
 
         [Required(ErrorMessage = "L'anagrafica del trasgressore è obbligatoria")]
         [ForeignKey("Anagrafica")]
-        public int IdAnagrafica { get; set; }
+        public Guid IdAnagrafica { get; set; }
 
         [Required(ErrorMessage = "La data della violazione è obbligatoria")]
-        [Column(TypeName = "date")]
         public DateTime DataViolazione { get; set; }
 
         [Required(ErrorMessage = "L'indirizzo della violazione è obbligatorio")]
@@ -29,10 +28,10 @@ namespace GestionaleMunicipale.Models
         public string NominativoAgente { get; set; }
 
         [Required(ErrorMessage = "La data di trascrizione del verbale è obbligatoria")]
-        [Column(TypeName = "date")]
         public DateTime DataTrascrizioneVerbale { get; set; }
 
         [Required(ErrorMessage = "L'importo della multa è obbligatorio")]
+        [Range(0.01, 10000, ErrorMessage = "L'importo deve essere compreso tra 0,01 e 10.000 euro")]
         [Column(TypeName = "decimal(10,2)")]
         public decimal Importo { get; set; }
 

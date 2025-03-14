@@ -10,13 +10,14 @@ namespace GestionaleMunicipale.Models
     {
         [Required(ErrorMessage = "L'ID del verbale è obbligatorio")]
         [ForeignKey("Verbale")]
-        public int IdVerbale { get; set; }
+        public Guid IdVerbale { get; set; }
 
         [Required(ErrorMessage = "L'ID della violazione è obbligatorio")]
         [ForeignKey("TipoViolazione")]
-        public int IdViolazione { get; set; }
+        public Guid IdViolazione { get; set; }
 
         [Required(ErrorMessage = "Il numero di punti decurtati è obbligatorio")]
+        [Range(1, 20, ErrorMessage = "I punti decurtati devono essere compresi tra 1 e 20")]
         public int DecurtamentoPunti { get; set; }
 
         public Verbale Verbale { get; set; }

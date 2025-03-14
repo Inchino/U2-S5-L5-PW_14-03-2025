@@ -10,7 +10,7 @@ namespace GestionaleMunicipale.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdViolazione { get; set; }
+        public Guid IdViolazione { get; set; }
 
         [Required(ErrorMessage = "La descrizione è obbligatoria")]
         [StringLength(255, ErrorMessage = "La descrizione non può superare i 255 caratteri")]

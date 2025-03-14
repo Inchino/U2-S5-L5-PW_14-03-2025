@@ -4,8 +4,8 @@ namespace GestionaleMunicipale.ViewModels
 {
     public class VerbaleViewModel
     {
-        public int IdVerbale { get; set; }
-        public int IdAnagrafica { get; set; }
+        public Guid IdVerbale { get; set; }
+        public Guid IdAnagrafica { get; set; }
         public DateTime DataViolazione { get; set; }
         public string IndirizzoViolazione { get; set; }
         public string NominativoAgente { get; set; }

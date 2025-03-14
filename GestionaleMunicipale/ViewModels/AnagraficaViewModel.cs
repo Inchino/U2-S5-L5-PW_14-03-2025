@@ -4,7 +4,7 @@ namespace GestionaleMunicipale.ViewModels
 {
     public class AnagraficaViewModel
     {
-        public int IdAnagrafica { get; set; }
+        public Guid IdAnagrafica { get; set; }
         public string Cognome { get; set; }
         public string Nome { get; set; }
         public string Indirizzo { get; set; }
